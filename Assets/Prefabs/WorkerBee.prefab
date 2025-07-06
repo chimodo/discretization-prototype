@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3909386782012787262}
   - component: {fileID: 4531195678140593247}
+  - component: {fileID: -5443931517631305526}
   m_Layer: 0
   m_Name: WorkerBee
   m_TagString: Untagged
@@ -87,3 +88,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5443931517631305526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8191492373359322201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a2ed6fea8d63c4082589aacafa59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eggSprite: {fileID: 7051055643097056020, guid: a383c268a70f6b84686b8c4a1f0dea87, type: 3}
+  larvaSprite: {fileID: 4791410316484420144, guid: cc112521c4de2d54396269b38479dd01, type: 3}
+  workerSprite: {fileID: -1764478117805707873, guid: 8d165f14b8cc63f479dcbb15ce7a28e0, type: 3}
+  eggTime: 5
+  larvaTime: 5
+  workerLifespan: 30
+  warningTime: 3
+  moveSpeed: 2
+  wanderRadius: 2
+  honeyProductionChance: 0.3
