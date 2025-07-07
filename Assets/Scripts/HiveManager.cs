@@ -50,6 +50,13 @@ public class HiveManager : MonoBehaviour
 
     void HandleMouseClick()
     {
+        // debug
+        if (GameManager.Instance == null)
+        {
+            Debug.LogError("GameManager.Instance is NULL");
+            return;
+        }
+
         if (!Input.GetMouseButtonDown(0)) return;
 
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -86,7 +93,7 @@ public class HiveManager : MonoBehaviour
         cellStates[position] = CellState.Egg;
         UpdateTileVisual(position);
 
-        // Spawn the bee at the tile’s world position
+        // Spawn the bee at the tileï¿½s world position
         Vector3 worldPos = hiveTilemap.CellToWorld(position) + new Vector3(0.5f, 0.5f, 0f);
         Instantiate(workerBeePrefab, worldPos, Quaternion.identity);
     }
@@ -113,6 +120,7 @@ public class HiveManager : MonoBehaviour
                 break;
         }
     }
+
 
     // These allow bees to update tile visuals when they grow
     //public void SetTileToLarva(Vector3Int pos)

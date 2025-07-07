@@ -10,7 +10,15 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Debug.Log("GameManager Awake() ran!");
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void AddHoney(int amount)
@@ -21,6 +29,13 @@ public class GameManager : MonoBehaviour
 
     public bool SpendHoney(int cost)
     {
+        // debugging
+        Debug.Log("Trying to spend honey...");
+        if (honeyText == null)
+        {
+            Debug.LogWarning("honeyText is null!");
+        }
+
         if (totalHoney >= cost)
         {
             totalHoney -= cost;
